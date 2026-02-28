@@ -4,7 +4,16 @@
     <%- include('partials/navbar') %>
     <h1>Bem vindo ao Guia de Perguntas!</h1>
     <hr>
-    <h2>Lista de Perguntas</h2>
+    <div class="container">
+        <% perguntas.forEach(pergunta => { %>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><%= pergunta.titulo %></h5>
+                    <p class="card-text"><%= pergunta.descricao %></p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
 
     <!-- Scripts no final do body, na ordem correta -->
     
