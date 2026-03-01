@@ -4,12 +4,17 @@
     <%- include('partials/navbar') %>
     <h1>Bem vindo ao Guia de Perguntas!</h1>
     <hr>
+    <h3>Perguntas Recentes</h3>
+    <a href="/perguntar" class="btn btn-success mb-3">Faça uma Pergunta</a>
+    <hr>
     <div class="container">
         <% perguntas.forEach(pergunta => { %>
             <div class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title"><%= pergunta.titulo %></h5>
-                    <p class="card-text"><%= pergunta.descricao %></p>
+                    <h5 class="card-title"><%= pergunta.titulo %></h5>                    
+                </div>
+                <div class="card-footer">    
+                    <a href="/pergunta/<%= pergunta.id %>"><button class="btn btn-primary">Responder</button></a>
                 </div>
             </div>
         <% }); %>
