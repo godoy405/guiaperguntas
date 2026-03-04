@@ -13,7 +13,7 @@ const Pergunta = connection.define('perguntas', {
 });
 
 Pergunta.sync({force: false}).then(() => {
-    console.log('Tabela Pergunta criada com sucesso!');
+    console.log('Todos os modelos sincronizados');
 }).catch(err => {
     console.error('Erro ao criar a tabela Pergunta:', err);
 });
